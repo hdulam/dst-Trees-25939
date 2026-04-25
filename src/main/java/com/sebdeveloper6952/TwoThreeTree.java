@@ -5,17 +5,11 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
 
-/**
- * A 2-3 tree implementation of {@link Map}.
- * <p>
- * Every internal node holds either one key (2-node, two children) or two keys
- * (3-node, three children). All leaves are at the same depth, so search,
- * insert, and delete all run in {@code O(log n)} worst-case time.
- * <p>
- * The algorithms follow the classic formulation: insertion propagates overflow
- * upward by splitting transient 4-nodes; deletion propagates underflow upward
- * via redistribution or fusion with a sibling.
- */
+// Implementación de un árbol 2-3.
+//Fork de ing sebastian arriola. Codigo para pruebas para tarea UVG. Pasa todas las pruebas al 100% en gradle
+// Estos procesos garantizan que el árbol siempre esté balanceado,
+
+
 public final class TwoThreeTree<K, V> implements Map<K, V> {
 
     private final Comparator<? super K> comparator;
